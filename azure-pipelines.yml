@@ -4,14 +4,19 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- main
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - AllNewSolution/AllNewProject
 
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'AllNewSolution/AllNewProject/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
