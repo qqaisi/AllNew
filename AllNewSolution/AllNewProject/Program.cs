@@ -15,7 +15,7 @@ namespace AllNewProject
         {
             CreateHostBuilder(args).Build().Run();
         }
-
+        //test for Pipeline
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
